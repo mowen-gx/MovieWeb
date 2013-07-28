@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- End of Meta -->
+		
+		<!-- Page title -->
+		<title>Movie Manager</title>
+		<!-- End of Page title -->
+		
+		<!-- Libraries -->
+		<link type="text/css" href="~/Content/admin/css/layout.css" rel="stylesheet" />	
+		
+		<script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="~/Content/js/easyTooltip.js"></script>
+		<script type="text/javascript" src="~/Content/js/jquery-ui-1.7.2.custom.min.js"></script>
+		<script type="text/javascript" src="~/Content/js/jquery.wysiwyg.js"></script>
+		<script type="text/javascript" src="~/Content/js/hoverIntent.js"></script>
+		<script type="text/javascript" src="~/Content/js/superfish.js"></script>
+		<script type="text/javascript" src="~/Content/js/custom.js"></script>
+		<!-- End of Libraries -->	
+	</head>
+	<body>
+		<!-- Container -->
+		<div id="container">
+			@Html.Partial("AdminHeader")
+			
+			<!-- Background wrapper -->
+			<div id="bgwrap">
+				 @RenderBody()
+				@Html.Partial("AdminSidebar")
+			</div>
+			<!-- End of bgwrap -->
+		</div>
+		<!-- End of Container -->
+		@Html.Partial("AdminFooter")
+	</body>
+</html>
+
+

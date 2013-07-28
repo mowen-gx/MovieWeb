@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>电影管理系统-登录</title>
+    <link type="text/css" href="~/Content/admin/css/login.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <div class="logo">
+            <a href="#" style="height: 81px; text-decoration: none;"><span style="font-size: 36px; color: white;">电影管理系统</span><br />
+                <span style="font-size: 18px; color: white;">版本：V1.0</span></a>
+        </div>
+        <div id="box">
+            <form action="@Url.Action("DoLogin")" method="POST">
+                <p class="main">
+                    <label>UserName: </label>
+                    <input name="username" value="" />
+                    <label>Password: </label>
+                    <input type="password" name="password" value="">
+                </p>
+                <p class="space">
+                    <span></span>
+                    <input type="submit" value="Login" class="login" />
+                </p>
+                <p>
+                  @if (ViewBag.Msg != null)
+                  {
+                      if (ViewBag.Msg == "登录成功")
+                      {
+                          <script type="text/javascript"> location.href = '@Url.Action("Index","AdminHome",new {area="Admin"})';</script>
+                      }
+                      else
+                      {
+                        @ViewBag.Msg;
+                      }
+                  }  
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

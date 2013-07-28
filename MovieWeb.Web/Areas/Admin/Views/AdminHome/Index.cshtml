@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div id="content">
+    <div id="main">
+        @Html.Partial("_LoginPartial")
+        <div class="pad20">
+            <!-- Big buttons -->
+            <ul class="dash">
+                <li>
+                    <a href="#" title="Write a new article" class="tooltip">
+                        <img src="~/Content/admin/assets/icons/8_48x48.png" alt="" />
+                        <span>New Movie</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Manage users and accounts" class="tooltip">
+                        <img src="~/Content/admin/assets/icons/16_48x48.png" alt="" />
+                        <span>Users</span>
+                    </a>
+                </li>
+                
+            </ul>
+            <!-- End of Big buttons -->
+        </div>
+
+    </div>
+</div>

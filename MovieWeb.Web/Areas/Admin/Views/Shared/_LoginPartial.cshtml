@@ -1,0 +1,5 @@
+﻿@if (Request.IsAuthenticated) {
+    <text>
+        <h1>Welcome, <span>@ViewBag.UserName</span>!&nbsp;&nbsp;<a href="@Url.Action("Logout","Login")">Sign out</a></h1>
+    </text>
+}
